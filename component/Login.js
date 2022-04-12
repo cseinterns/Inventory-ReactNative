@@ -76,7 +76,7 @@ export default class Login extends Component {
         </View>
         <View style={{alignItems: 'center',width: '60%'}}>
         <Button
-          color="#3740FE"
+          color="#03045e"
           mode="contained"
           style={{
             borderRadius: "8",
@@ -91,7 +91,7 @@ export default class Login extends Component {
         <Text 
           style={styles.loginText}
           onPress={() => this.props.navigation.navigate('Signup')}>
-          Don't have account? Click here to signup
+          Don't have account? Click here to <Text style={{fontWeight:'bold'}}>signup</Text>
         </Text>
         {/* </Card> */}
         </View>                          
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   loginText: {
-    color: "#3740FE",
+    color: "#4361ee",
     marginTop: 25,
     textAlign: "center",
   },

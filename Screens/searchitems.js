@@ -147,9 +147,10 @@ fetchCollection = (querySnapshot) => {
                 fontWeight: "bold",
                 borderColor: "Black",
                 borderWidth: 1,
-                padding: 10,
+                alignItems: 'center',
+                height:"50%",
                 width:"80%",
-                marginLeft:10,
+                padding: 10
               }}
               value={this.state.CIQ}
               onChangeText={(val) => this.inputEl(val, 'CIQ')}
@@ -299,13 +300,13 @@ fetchCollection = (querySnapshot) => {
           <View style={{backgroundColor: '#ffffff' }}>
           <DataTable style={{borderRadius: 5,margin:5, border: "2px solid rgb(0, 0, 0)" }}>
 
-<DataTable.Header style={{backgroundColor: "#eafffb"}}>
-  <DataTable.Title><Text style={{color:"black",fontSize:"100%"}}>Availability</Text></DataTable.Title>
-  <DataTable.Title varchar>SKUID</DataTable.Title>
-  <DataTable.Title>Product Name</DataTable.Title>
-  <DataTable.Title>Unit of Measure</DataTable.Title>
-  <DataTable.Title numeric>Current Inventory Quantity</DataTable.Title>
-  <DataTable.Title numeric>New Order Quantity</DataTable.Title>
+<DataTable.Header style={{backgroundColor: "#E6F3F5"}}>
+  <DataTable.Title><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman',alignContent:'center'}}>Availability</Text></DataTable.Title>
+  <DataTable.Title varchar><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman',alignSelf:'center'}}>SKUID</Text></DataTable.Title>
+  <DataTable.Title><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman'}}>Product Name</Text></DataTable.Title>
+  <DataTable.Title><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman'}}>Unit of Measure</Text></DataTable.Title>
+  <DataTable.Title numeric><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman',textAlign:'center'}}>Current Inventory Quantity</Text></DataTable.Title>
+  <DataTable.Title numeric><Text style={{color:"black",fontSize:14,fontFamily:'TimesNewRoman',alignSelf:'center'}}>New Order Quantity</Text></DataTable.Title>
   {/* <DataTable.Title Button>Delete Item</DataTable.Title> */}
 </DataTable.Header>
 <ScrollView style={styles.wrapper}>

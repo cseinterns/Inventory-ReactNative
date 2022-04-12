@@ -37,11 +37,14 @@ function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator
-          initialRouteName="Login"
+          initialRouteName="Dashboard"
           screenOptions={{
             headerTitleAlign: 'center',
             headerStyle: {
               backgroundColor: '#03045e',
+              shadowRadius: 3,
+              shadowOpacity: 0.5,
+              shadowOffset: { width: 1, height: 3},
             },
             headerTintColor: '#fff',
             headerTitleStyle: {

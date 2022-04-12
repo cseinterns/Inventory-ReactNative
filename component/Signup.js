@@ -1,8 +1,9 @@
 // components/signup.js
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Alert, ActivityIndicator } from 'react-native';
 import firebase from '../database/firebase';
-
+import { Fontisto,MaterialCommunityIcons,FontAwesome5 } from '@expo/vector-icons';
+import {Button} from 'react-native-paper'
 export default class Signup extends Component {
   
   constructor() {
@@ -55,18 +56,25 @@ export default class Signup extends Component {
     }    
     return (
       <View style={styles.container}>  
+      <View style={{flexDirection: 'row', alignSelf: 'center',width:'100%',marginLeft:'20%',marginRight:'20%'}}>
+      <FontAwesome5 name="user" size={24} color="black" />
         <TextInput
           style={styles.inputStyle}
           placeholder="Name"
           value={this.state.displayName}
           onChangeText={(val) => this.updateInputVal(val, 'displayName')}
-        />      
+        /> 
+        </View>
+        <View style={{flexDirection: 'row', alignSelf: 'center',width:'100%',marginLeft:'20%',marginRight:'20%'}}>
+        <Fontisto name="email" size={24} color="black" />     
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
-        />
+        /></View>
+        <View style={{flexDirection: 'row', width: '100%',alignSelf:'center',marginLeft:'20%',marginRight:'20%'}}>
+        <MaterialCommunityIcons name="form-textbox-password" size={24} color="black" />
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"
@@ -74,16 +82,26 @@ export default class Signup extends Component {
           onChangeText={(val) => this.updateInputVal(val, 'password')}
           maxLength={15}
           secureTextEntry={true}
-        />   
+        /> </View>
+        <View style={{alignItems: 'center',width: '60%'}}> 
         <Button
-          color="#3740FE"
-          title="Signup"
+          color="#03045e"
+          mode='contained'
+          style={{
+            borderRadius: "8",
+            borderWidth: "1",
+            margin: "10",
+            elevation: "3",
+            marginLeft:'60%'
+          }}
           onPress={() => this.registerUser()}
-        />
+        >Signup
+        </Button>
+        </View> 
         <Text 
           style={styles.loginText}
           onPress={() => this.props.navigation.navigate('Login')}>
-          Already Registered? Click here to login
+          Already Registered? Click here to <Text style={{fontWeight:'bold'}}>login</Text>
         </Text>                          
       </View>
     );
@@ -99,12 +117,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   inputStyle: {
-    width: '100%',
+    width: "80%",
+    marginLeft: 5,
     marginBottom: 15,
     paddingBottom: 15,
+    paddingTop: 15,
     alignSelf: "center",
     borderColor: "#ccc",
-    borderBottomWidth: 1
+    paddingTop: 5,
+    borderBottomWidth: 1,
   },
   loginText: {
     color: '#3740FE',
