@@ -1,0 +1,24 @@
+Header 
+Add 1)log in
+    2)log out
+    
+Drawer Screen 
+1)Add Manage items
+
+
+
+
+store order form 
+1)add items button below product name
+2)add table coloum delete
+3)
+
+customer
+1)add customer button
+2)delete customer button 
+3) change availability to select
+4) Table rows name
+ 1)select
+ 2)Customer id 
+ 3)Customer name
+ 4)Number of order
